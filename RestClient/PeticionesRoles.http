@@ -1,0 +1,28 @@
+GET http://localhost:5999/roles/ HTTP/1.1
+
+###
+
+GET http://localhost:5999/roles/1 HTTP/1.1
+
+###
+POST http://localhost:5999/roles/create HTTP/1.1
+content-type: application/json
+
+{
+    "ID": 1,
+    "Nombre": "Administrador",
+    "Descripcion": "Rol que tiene acceso a toda la plataforma web"
+}
+
+###
+POST http://localhost:5999/roles/put/1 HTTP/1.1
+content-type: application/json
+
+{
+    "Nombre": "Desarrollador",
+    "Descripcion": "Rol que tiene acceso a toda la plataforma web para configurar o actualizar secciones",
+    "Estatus": true
+}
+
+###
+GET http://localhost:5999/roles/del/1 HTTP/1.1

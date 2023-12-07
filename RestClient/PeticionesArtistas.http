@@ -1,0 +1,29 @@
+GET http://localhost:5999/artista/ HTTP/1.1
+
+###
+
+GET http://localhost:5999/artista/1 HTTP/1.1
+
+###
+POST http://localhost:5999/artista/create HTTP/1.1
+content-type: application/json
+
+{
+    "Persona_ID": 2,
+    "Descripcion_Blog": "Accion",
+    "Imagen": ""
+}
+
+###
+POST http://localhost:5999/artista/put/1 HTTP/1.1
+content-type: application/json
+
+{
+    "Persona_ID": 1,
+    "Descripcion_Blog": "Accion",
+    "Imagen": "",
+    "Estatus": true
+}
+
+###
+GET http://localhost:5999/artista/del/1 HTTP/1.1
